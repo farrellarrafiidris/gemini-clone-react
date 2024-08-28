@@ -67,11 +67,13 @@
 
 /* BOTOM SIDEBAR SECTION */
 
+/* bottom class inside sidebar class*/
 .sidebar .bottom {
   display: flex;
   flex-direction: column;
 }
 
+/* bottom-item class inside sidebar class*/
 .sidebar .bottom-item{
     padding-right: 10px;
     cursor: pointer;
