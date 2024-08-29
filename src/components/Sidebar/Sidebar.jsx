@@ -21,6 +21,7 @@ const Sidebiar = () => {
           <img
             src={assets.plus_icon}
             alt=""
+            className="plus-icon"
           />
           {extended ? <p>New Chat</p> : null}
         </div>

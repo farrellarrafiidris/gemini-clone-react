@@ -7,6 +7,7 @@
     min-height: 100vh;
     padding-bottom: 15vh
     position: relative;
+    background-color:#131314
 }
 
 /* NAV SECTION */
@@ -19,6 +20,10 @@
     font-size:22px;
     padding:20px;
     color: #585858; 
+}
+
+.nav p{
+    color: #E8EBED;
 }
 
 /* access img tag inside nav class and nav inside main class */
@@ -37,7 +42,7 @@
 .main .greet{
     margin: 50px 0px;
     font-size: 56px;
-    color: #c4c7c5;
+    color: #444746;
     font-weight:500;
     padding: 20px;
 }
@@ -63,7 +68,7 @@
 .main .card{
     height:200px;
     padding: 15px;
-    background-color: #f0f4f9;
+    background-color: #1e1f20;
     border-radius: 10px;
     position: relative;
     cursor:pointer;
@@ -73,7 +78,7 @@
 .main .card img{
     width: 35px;
     position: absolute;
-    background-color: white;
+    background-color: #131314;
     border-radius: 20px;
     bottom: 10px;
     right: 10px;
@@ -86,9 +91,11 @@
 }
 
 .main .card:hover{
-    background-color: #dfe4ea;
+    background-color: #333537;
 
 }
+
+
 
 /* MAIN BOTTOM SECTION */
 
@@ -108,7 +115,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    background-color: #f0f4f9;
+    background-color: #1e1f20;
     padding: 10px 20px;
     border-radius: 50px;
 }
@@ -127,6 +134,7 @@
     outline: none;
     padding: 8px;
     font-size: 18px;
+    color:white;
 }
 
 /* div tag inside search-box class */
@@ -142,6 +150,7 @@
     margin: 15px auto;
     text-align: center;
     font-weight: 400;
+    color:#E8EBED;
 }
 
 /* span inside main-bottom class */
@@ -165,6 +174,7 @@
     display:flex;
     align-items: center;
     gap: 20px;
+    color: #e8eaed
 }
 
 .result-title img{
@@ -176,9 +186,48 @@
     display:flex;
     align-items: start;
     gap: 20px;
+    color: #e8eaed
 }
 
 .result-data img{
     width: 40px;
     border-radius: 50%;
+}
+
+.loader{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right,#B0C4D3,#404040,#606060,#B0C4D3);
+    background-size: 800px 50px;
+    height:20px;    
+    animation: loader 3s infinite linear;
+}
+
+.result-data{
+    display: flex;
+    align-items: start;
+    gap:20px;    
+}
+
+.result-data p{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+@keyframes loader{
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800px 0[x];
+    }
 }

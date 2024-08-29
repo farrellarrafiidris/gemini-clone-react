@@ -6,13 +6,13 @@
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #f0f4f9;
+  background-color: #1e1f20;
   padding: 25px 15px;
 }
 
 /* <img> inside sidebar class*/
 .sidebar img {
-  width: 20px;
+  width: 23px;
 }
 
 /* menu class inside sidebar class*/
@@ -26,10 +26,11 @@
 .sidebar .new-chat {
   margin-top: 50px;
   display: inline-flex;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
-  padding: 10px 15px;
-  background-color: #e6eaf1;
+  padding:10px;
+  background-color: #1a1a1c;
   border-radius: 50px;
   font-size: 14px;
   color: gray;
@@ -44,8 +45,13 @@
 
 /* recent-title class inside sidebar class*/
 .sidebar .recent-title {
+  color:#e3e3e3;
   margin-top: 30px;
   margin-bottom: 20px;
+}
+
+.plus-icon{
+  
 }
 
 /* recent-entry class inside sidebar class*/
@@ -56,13 +62,13 @@
   padding: 10px;
   padding-right: 40px;
   border-radius: 50px;
-  color: #282828;
+  color: #E3E3E3;
   cursor: pointer;
 }
 
 /* adding hover recent-entry class inside sidebar class*/
 .sidebar .recent-entry:hover {
-  background-color: #e2e6eb;
+  background-color: #282a2c;
 }
 
 /* BOTOM SIDEBAR SECTION */

@@ -50,7 +50,7 @@ const Main = () => {
               <div className="card">
                 <p>Brainstorm team bonding activities for our work retreat</p>
                 <img
-                  src={assets.message_icon}
+                  src={assets.message_icon_card}
                   alt=""
                 />
               </div>
@@ -66,12 +66,26 @@ const Main = () => {
         ) : (
           <div className="result">
             <div className="result-title">
-                <img src={assets.user_icon} alt="" />
-                <p>{recentPromt}</p>
+              <img
+                src={assets.user_icon}
+                alt=""
+              />
+              <p>{recentPromt}</p>
             </div>
             <div className="result-data">
-                <img src={assets.gemini_icon} alt="" />
-                <p dangerouslySetInnerHTML={{__html:resultData}}></p>
+              <img
+                src={assets.gemini_icon}
+                alt=""
+              />
+              {loading ? (
+                <div className="loader">
+                  <hr />
+                  <hr />
+                  <hr />
+                </div>
+              ) : (
+                <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
+              )}
             </div>
           </div>
         )}
@@ -93,14 +107,16 @@ const Main = () => {
                 src={assets.mic_icon}
                 alt=""
               />
-              <img
+
+              {!input ? "" : <img
                 src={assets.send_icon}
                 alt=""
                 onClick={() => {
-                    console.log("clicl onsent")
-                    return onSent();
+                  console.log("clicl onsent");
+                  return onSent();
                 }}
-              />
+              />}
+              
             </div>
           </div>
           <p className="bottom-info">
@@ -112,5 +128,6 @@ const Main = () => {
     </div>
   );
 };
-
+//https://www.youtube.com/watch?v=0yboGn8errU&t=4638s
+// 1:19:00
 export default Main;
