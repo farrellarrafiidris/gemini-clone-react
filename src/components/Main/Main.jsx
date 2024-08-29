@@ -14,6 +14,7 @@ const Main = () => {
     input,
   } = useContext(Context);
 
+  console.log("data sudah di main",resultData);
   return (
     <div className="main">
       <div className="nav">

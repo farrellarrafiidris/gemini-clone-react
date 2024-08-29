@@ -231,3 +231,10 @@
         background-position: 800px 0[x];
     }
 }
+
+@media (min-width: 300px) {
+
+    .cards{
+      visibility:hidden;
+    }
+  }

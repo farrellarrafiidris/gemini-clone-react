@@ -1,9 +1,16 @@
 import "./Sidebar.css";
 import { assets } from "../../assets/assets";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { Context } from "../../context/context";
 
 const Sidebiar = () => {
   const [extended, setExtended] = useState(false);
+  const {onSent,prevPromt,setRecentPromt,newChat} = useContext(Context);
+
+  const laodPrompt = async(prompt) =>{
+    setRecentPromt(prompt);
+    await onSent(prompt)
+  }
 
   function toggleSidebar() {
     setExtended(!extended)
@@ -17,7 +24,7 @@ const Sidebiar = () => {
           src={assets.menu_icon}
           alt=""
         />
-        <div className="new-chat">
+        <div onClick={()=>newChat()} className="new-chat">
           <img
             src={assets.plus_icon}
             alt=""
@@ -28,13 +35,14 @@ const Sidebiar = () => {
         {extended ? (
           <div className="recent">
             <p className="recent-title">Recent</p>
-            <div className="recent-entry">
-              <img
-                src={assets.message_icon}
-                alt=""
-              />
-              <p>What is react ... </p>
-            </div>
+            {prevPromt.map((item,index) => {
+              return (
+                <div key={index} onClick={() =>laodPrompt(item)} className="recent-entry">
+                  <img src={assets.message_icon}alt=""/>
+                  <p>{item.slice(0,10)}...</p>
+                </div>
+              )})}
+           
           </div>
         ) : null}
       </div>
